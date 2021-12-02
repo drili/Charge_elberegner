@@ -216,17 +216,99 @@
                      color: #fff;
                      border: none;
                 }
+                .element_beregner_picker .button-picker {
+                     display: flex;
+                }
+                .element_beregner_picker .button-picker button {
+                     border: 1px solid greenyellow;
+                     padding: 20px 40px;
+                     color: greenyellow;
+                     cursor: pointer;
+                }
+                .custom-container {
+                     margin-bottom: 80px;
+                }
+                .element_beregner_picker .button-picker button.selected {
+                     /* background: greenyellow; */
+                     color: #fff;
+                     position: relative;
+                }
+                .element_beregner_picker .button-picker button.selected::after {
+                     content: "";
+                     width: 0%;
+                     height: 100%;
+                     background: greenyellow;
+                     position: absolute;
+                     left: 0;
+                     top: 0;
+                     z-index: -1;
+                     animation-name: buttonAnimationSelected;
+                     animation-duration: 0.5s;
+                     animation-fill-mode: forwards;
+                     animation-timing-function: cubic-bezier(0.3,0.9,0.5,0.9);
+                     animation-delay: 0.2s;
+                }
+                @keyframes buttonAnimationSelected {
+                    0% {
+                        width: 0%;
+                    }
+                    100% {
+                        width: 100%;
+                    }
+                }
+                .element_beregner_picker .button-picker button.not-selected {
+                     /* background: greenyellow; */
+                     color: greenyellow;
+                     position: relative;
+                }
+                .element_beregner_picker .button-picker button.not-selected::after {
+                     content: "";
+                     width: 100%;
+                     height: 100%;
+                     background: greenyellow;
+                     position: absolute;
+                     left: 0;
+                     top: 0;
+                     z-index: -1;
+                     animation-name: buttonAnimationNotSelected;
+                     animation-duration: 0.5s;
+                     animation-fill-mode: forwards;
+                     animation-timing-function: cubic-bezier(0.3,0.9,0.5,0.9);
+                     animation-delay: 0.2s;
+                }
+                @keyframes buttonAnimationNotSelected {
+                    0% {
+                        width: 100%;
+                    }
+                    100% {
+                        width: 0%;
+                    }
+                }
+                .element_beregner .beregner-form {
+                     display: none;
+                }
           </style>
           <!-- CSS END -->
 
           <!-- HTML START -->
-          <div class="element_beregner_picker">
+          <div class="element_beregner_picker custom-container">
                <div class="element_beregner_picker-inner">
                     <div class="grid-x grid-x-main-picker">
                          <div class="cell small-8 cell-picker">
                               <h1>Find dit abonnement her</h1>
 
+                              <div class="button-picker">
+                                   <span>
+                                        <button id="one" class="selected">One</button>
+                                   </span>
+                                   <span>
+                                        <button id="two">Two</button>
+                                   </span>
+                              </div>
 
+                              <div class="type-beregner">
+                                   <h3>Beregner: <span class="type-beregner-content">One</span></h3>
+                              </div>
                          </div>
                     </div>
                </div>
@@ -236,7 +318,8 @@
                <div class="element_beregner-inner">
                     <div class="grid-x grid-x-main">
                          <div class="cell small-8 cell-beregner">
-                              <form>
+                              <form id="form_one" class="beregner-form">
+                                   <p>One</p>
                                    <div class="antal-km">
                                         <label for="antal-km">Antal kørte km om året:</label><br>
                                         <div class="grid-x grid-x-input">
@@ -277,8 +360,63 @@
                                         </div>
                                    </div>
 
-                                   <div class="submit-button">
-                                        <input type="submit" value="Find abonnement">
+                                   <div class="grid-x">
+                                        <div class="cell small-10">
+                                            <div class="submit-button">
+                                                 <input type="submit" value="Find abonnement">
+                                            </div>
+                                        </div>
+                                   </div>
+                              </form>
+
+                              <form id="form_two" class="beregner-form">
+                                   <p>Two</p>
+                                   <div class="antal-km">
+                                        <label for="antal-km">Antal kørte km om året:</label><br>
+                                        <div class="grid-x grid-x-input">
+                                             <div class="cell small-10">
+                                                  <input type="text" id="antal-km" name="antal-km">
+                                             </div>
+                                             <div class="cell small-2 cell-question">
+                                                  <div class="cell-question-p">
+                                                       <p>?</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="batteri-størrelse">
+                                        <label for="batteri-størrelse">Størelse på bilens batteri:</label><br>
+                                        <div class="grid-x grid-x-input">
+                                             <div class="cell small-10">
+                                                  <input type="text" id="batteri-størrelse" name="batteri-størrelse">
+                                             </div>
+                                             <div class="cell small-2 cell-question">
+                                                  <div class="cell-question-p">
+                                                       <p>?</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="rækkevide">
+                                        <label for="rækkevide">Bilens rækkevide ved fuld opladning:</label><br>
+                                        <div class="grid-x grid-x-input">
+                                             <div class="cell small-10">
+                                                  <input type="text" id="rækkevide" name="rækkevide">
+                                             </div>
+                                             <div class="cell small-2 cell-question">
+                                                  <div class="cell-question-p">
+                                                       <p>?</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <div class="grid-x">
+                                        <div class="cell small-10">
+                                            <div class="submit-button">
+                                                 <input type="submit" value="Find abonnement">
+                                            </div>
+                                        </div>
                                    </div>
                               </form>
 
@@ -292,7 +430,29 @@
           <script defer type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
           <script defer type="text/javascript">
                $(document).ready(function() {
-
+                    $("#form_one").fadeIn();
+                    $(".button-picker button").click(function() {
+                         try {
+                              $(".button-picker button").each(function() {
+                                  $(".selected").addClass("not-selected");
+                                   $(this).removeClass("selected");
+                              })
+                              $(".beregner-form").fadeOut();
+                         } catch(err) {
+                              console.log(err.message);
+                         } finally {
+                              $(this).removeClass("not-selected");
+                              $(this).addClass("selected");
+                              var buttonText = $(this).text();
+                              var buttonId = $(this).attr("id");
+                              $(".type-beregner-content").text(buttonText);
+                              setTimeout(function() {
+                                   $("#form_"+buttonId+"").fadeIn();
+                              },750);
+                              console.log(buttonId);
+                         }
+                         console.log($(this).text());
+                    })
                });
           </script>
           <!-- JS END -->
