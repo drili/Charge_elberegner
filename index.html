@@ -190,7 +190,11 @@
                      margin-bottom: 20px;
                 }
                 .element_beregner .cell-beregner {
-                     margin: 0 auto;
+                    margin: 0 auto;
+                }
+                .element_beregner .cell-beregner form {
+                     padding: 60px 40px;
+                     box-shadow: -5px 18px 60px 0 rgb(210 210 234 / 40%);
                 }
                 .element_beregner .cell-question {
                      text-align: center;
@@ -218,18 +222,23 @@
                 }
                 .element_beregner_picker .button-picker {
                      display: flex;
+                     justify-content: center;
+                }
+                .element_beregner_picker .grid-x-main-picker {
+                     margin: 0 auto;
+                     text-align: center;
                 }
                 .element_beregner_picker .button-picker button {
-                     border: 1px solid greenyellow;
+                     border: 1px solid #91c41a;
                      padding: 20px 40px;
-                     color: greenyellow;
+                     color: #91c41a;
                      cursor: pointer;
                 }
                 .custom-container {
-                     margin-bottom: 80px;
+                     margin-bottom: 40px;
                 }
                 .element_beregner_picker .button-picker button.selected {
-                     /* background: greenyellow; */
+                     /* background: #91c41a; */
                      color: #fff;
                      position: relative;
                 }
@@ -237,7 +246,7 @@
                      content: "";
                      width: 0%;
                      height: 100%;
-                     background: greenyellow;
+                     background: #91c41a;
                      position: absolute;
                      left: 0;
                      top: 0;
@@ -257,15 +266,15 @@
                     }
                 }
                 .element_beregner_picker .button-picker button.not-selected {
-                     /* background: greenyellow; */
-                     color: greenyellow;
+                     /* background: #91c41a; */
+                     color: #91c41a;
                      position: relative;
                 }
                 .element_beregner_picker .button-picker button.not-selected::after {
                      content: "";
                      width: 100%;
                      height: 100%;
-                     background: greenyellow;
+                     background: #91c41a;
                      position: absolute;
                      left: 0;
                      top: 0;
@@ -287,6 +296,27 @@
                 .element_beregner .beregner-form {
                      display: none;
                 }
+                .elberegner_result .cell-price {
+                     margin: 0 auto;
+                }
+                .elberegner_result .cell-price-inner {
+                     text-align: center;
+                }
+                .elberegner_result .result-box.result-box-shown .result-box-shown-inner {
+                    display: inline-block;
+                    flex-direction: column;
+                    background: #005844;
+                    padding: 40px 60px;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+                .elberegner_result .result-box.result-box-shown h5 {
+                     margin-bottom: 20px;
+                }
+                .elberegner_result .result-box.result-box-shown h2,
+                .elberegner_result .result-box.result-box-shown h3 {
+                     color: #fff;
+                }
           </style>
           <!-- CSS END -->
 
@@ -297,60 +327,34 @@
                          <div class="cell small-8 cell-picker">
                               <h1>Find dit abonnement her</h1>
 
-                              <div class="button-picker">
+                              <div class="button-picker custom-container">
                                    <span>
-                                        <button id="one" class="selected">One</button>
+                                        <button id="one" class="selected">Elbil</button>
                                    </span>
                                    <span>
-                                        <button id="two">Two</button>
+                                        <button id="two">Hybrid</button>
                                    </span>
                               </div>
 
                               <div class="type-beregner">
-                                   <h3>Beregner: <span class="type-beregner-content">One</span></h3>
+                                   <h3>Beregner: <span class="type-beregner-content">Elbil</span></h3>
                               </div>
                          </div>
                     </div>
                </div>
           </div>
 
-          <div class="element_beregner">
+          <div class="element_beregner custom-container">
                <div class="element_beregner-inner">
                     <div class="grid-x grid-x-main">
                          <div class="cell small-8 cell-beregner">
                               <form id="form_one" class="beregner-form">
-                                   <p>One</p>
-                                   <div class="antal-km">
-                                        <label for="antal-km">Antal kørte km om året:</label><br>
+                                   <!-- <p>One</p> -->
+                                   <div class="batteri-storrelse">
+                                        <label for="batteri-storrelse">Størelse på bilens batteri:</label><br>
                                         <div class="grid-x grid-x-input">
                                              <div class="cell small-10">
-                                                  <input type="text" id="antal-km" name="antal-km">
-                                             </div>
-                                             <div class="cell small-2 cell-question">
-                                                  <div class="cell-question-p">
-                                                       <p>?</p>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                                   <div class="batteri-størrelse">
-                                        <label for="batteri-størrelse">Størelse på bilens batteri:</label><br>
-                                        <div class="grid-x grid-x-input">
-                                             <div class="cell small-10">
-                                                  <input type="text" id="batteri-størrelse" name="batteri-størrelse">
-                                             </div>
-                                             <div class="cell small-2 cell-question">
-                                                  <div class="cell-question-p">
-                                                       <p>?</p>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                                   <div class="rækkevide">
-                                        <label for="rækkevide">Bilens rækkevide ved fuld opladning:</label><br>
-                                        <div class="grid-x grid-x-input">
-                                             <div class="cell small-10">
-                                                  <input type="text" id="rækkevide" name="rækkevide">
+                                                  <input type="text" id="batteri-storrelse" name="batteri-storrelse" onkeypress="validateNumber(event)">
                                              </div>
                                              <div class="cell small-2 cell-question">
                                                   <div class="cell-question-p">
@@ -360,8 +364,40 @@
                                         </div>
                                    </div>
 
+                                   <div class="raekkevide">
+                                        <label for="raekkevide">Bilens raekkevide ved fuld opladning:</label><br>
+                                        <div class="grid-x grid-x-input">
+                                             <div class="cell small-10">
+                                                  <input type="text" id="raekkevide" name="raekkevide" onkeypress="validateNumber(event)">
+                                             </div>
+                                             <div class="cell small-2 cell-question">
+                                                  <div class="cell-question-p">
+                                                       <p>?</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <div class="antal-km">
+                                        <label for="antal-km">Antal kørte km om året:</label><br>
+                                        <div class="grid-x grid-x-input">
+                                             <div class="cell small-10">
+                                                  <input type="text" id="antal-km" name="antal-km" onkeypress="validateNumber(event)">
+                                             </div>
+                                             <div class="cell small-2 cell-question">
+                                                  <div class="cell-question-p">
+                                                       <p>?</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <div class="hidden-input">
+                                        <input type="hidden" name="form_hidden_val" value="form_one">
+                                   </div>
+
                                    <div class="grid-x">
-                                        <div class="cell small-10">
+                                        <div class="cell small-12">
                                             <div class="submit-button">
                                                  <input type="submit" value="Find abonnement">
                                             </div>
@@ -370,38 +406,12 @@
                               </form>
 
                               <form id="form_two" class="beregner-form">
-                                   <p>Two</p>
-                                   <div class="antal-km">
-                                        <label for="antal-km">Antal kørte km om året:</label><br>
+                                   <!-- <p>Two</p> -->
+                                   <div class="batteri-storrelse">
+                                        <label for="batteri-storrelse">Størelse på bilens batteri:</label><br>
                                         <div class="grid-x grid-x-input">
                                              <div class="cell small-10">
-                                                  <input type="text" id="antal-km" name="antal-km">
-                                             </div>
-                                             <div class="cell small-2 cell-question">
-                                                  <div class="cell-question-p">
-                                                       <p>?</p>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                                   <div class="batteri-størrelse">
-                                        <label for="batteri-størrelse">Størelse på bilens batteri:</label><br>
-                                        <div class="grid-x grid-x-input">
-                                             <div class="cell small-10">
-                                                  <input type="text" id="batteri-størrelse" name="batteri-størrelse">
-                                             </div>
-                                             <div class="cell small-2 cell-question">
-                                                  <div class="cell-question-p">
-                                                       <p>?</p>
-                                                  </div>
-                                             </div>
-                                        </div>
-                                   </div>
-                                   <div class="rækkevide">
-                                        <label for="rækkevide">Bilens rækkevide ved fuld opladning:</label><br>
-                                        <div class="grid-x grid-x-input">
-                                             <div class="cell small-10">
-                                                  <input type="text" id="rækkevide" name="rækkevide">
+                                                  <input type="text" id="batteri-storrelse" name="batteri-storrelse" onkeypress="validateNumber(event)">
                                              </div>
                                              <div class="cell small-2 cell-question">
                                                   <div class="cell-question-p">
@@ -411,8 +421,40 @@
                                         </div>
                                    </div>
 
+                                   <div class="raekkevide">
+                                        <label for="raekkevide">Bilens raekkevide ved fuld opladning:</label><br>
+                                        <div class="grid-x grid-x-input">
+                                             <div class="cell small-10">
+                                                  <input type="text" id="raekkevide" name="raekkevide" onkeypress="validateNumber(event)">
+                                             </div>
+                                             <div class="cell small-2 cell-question">
+                                                  <div class="cell-question-p">
+                                                       <p>?</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <div class="antal-km">
+                                        <label for="antal-km">Antal kørte km om året:</label><br>
+                                        <div class="grid-x grid-x-input">
+                                             <div class="cell small-10">
+                                                  <input type="text" id="antal-km" name="antal-km" onkeypress="validateNumber(event)">
+                                             </div>
+                                             <div class="cell small-2 cell-question">
+                                                  <div class="cell-question-p">
+                                                       <p>?</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <div class="hidden-input">
+                                        <input type="hidden" name="form_hidden_val" value="form_two">
+                                   </div>
+
                                    <div class="grid-x">
-                                        <div class="cell small-10">
+                                        <div class="cell small-12">
                                             <div class="submit-button">
                                                  <input type="submit" value="Find abonnement">
                                             </div>
@@ -420,6 +462,22 @@
                                    </div>
                               </form>
 
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+          <div class="elberegner_result custom-container">
+               <div class="elberegner_result-inner">
+                    <div class="grid-x grid-x-result">
+                         <div class="cell small-12 large-8 cell-price">
+                              <div class="grid-x grid-x-result-inner">
+                                   <div class="cell small-12 large-12 cell-price-inner">
+                                        <div class="result-box">
+
+                                        </div>
+                                   </div>
+                              </div>
                          </div>
                     </div>
                </div>
@@ -429,6 +487,21 @@
           <!-- JS START -->
           <script defer type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
           <script defer type="text/javascript">
+               // --- Validate Form (Numeric only)
+               function validateNumber(evt) {
+                    var theEvent = evt || window.event;
+                    if (theEvent.type === 'paste') {
+                         key = event.clipboardData.getData('text/plain');
+                    } else {
+                         var key = theEvent.keyCode || theEvent.which;
+                         key = String.fromCharCode(key);
+                    }
+                    var regex = /[0-9]|\./;
+                    if( !regex.test(key) ) {
+                         theEvent.returnValue = false;
+                         if(theEvent.preventDefault) theEvent.preventDefault();
+                    }
+               }
                $(document).ready(function() {
                     $("#form_one").fadeIn();
                     $(".button-picker button").click(function() {
@@ -438,6 +511,8 @@
                                    $(this).removeClass("selected");
                               })
                               $(".beregner-form").fadeOut();
+                              $(".result-box").html("");
+                              $(".result-box").removeClass("result-box-shown");
                          } catch(err) {
                               console.log(err.message);
                          } finally {
@@ -451,8 +526,403 @@
                               },750);
                               console.log(buttonId);
                          }
-                         console.log($(this).text());
+                         // console.log($(this).text());
                     })
+
+                    // --- Form Submit
+                    $('form').submit(function (evt) {
+                         var antalKM = $("input[name='antal-km']",this).val();
+                         var bilBatteri = $("input[name='batteri-storrelse']",this).val();
+                         var raekkevide = $("input[name='raekkevide']",this).val();
+                         var formID = $("input[name='form_hidden_val']",this).val();
+                         console.log(formID);
+
+                         if(formID == "form_one") {
+                              // --- Elbil
+                              console.log("ELBIL");
+                              try {
+                                   // Elbil global
+                                   var bkWh = antalKM / (raekkevide / bilBatteri);
+                                   var kWhPRM = bkWh / 12.0;
+                                   var sPRkw = 2.1;
+                                   var arrayElbilPrices = [];
+                                   console.log(bkWh);
+
+                                   // Elbil -> Charge5
+                                   var charge5_version = 5;
+                                   var charge5_brugtekWh = kWhPRM;
+                                   var charge5_pris = 224;
+                                   var charge5_Kwh = 75;
+                                   if(charge5_brugtekWh > charge5_Kwh) {
+                                        var charge5_overkort = charge5_brugtekWh - charge5_Kwh;
+                                   } else {
+                                        var charge5_overkort = 0;
+                                   }
+                                   var charge5_prisOverkort = charge5_overkort * 1.75;
+                                   var charge5_godtGorelse = (charge5_brugtekWh * 2.1);
+                                   var charge5_afregningVerdo = (charge5_pris + charge5_prisOverkort - charge5_godtGorelse);
+                                   var charge5_afregningStrom = charge5_godtGorelse;
+                                   var charge5_totalPris = ((charge5_afregningVerdo) + charge5_afregningStrom);
+
+                                   // Elbil -> Charge10
+                                   var charge10_version = 10;
+                                   var charge10_brugtekWh = kWhPRM;
+                                   var charge10_pris = 299;
+                                   var charge10_Kwh = 150;
+                                   if(charge10_brugtekWh > charge10_Kwh) {
+                                        var charge10_overkort = charge10_brugtekWh - charge10_Kwh;
+                                   } else {
+                                        var charge10_overkort = 0;
+                                   }
+                                   var charge10_prisOverkort = charge10_overkort * 1.75;
+                                   var charge10_godtGorelse = (charge10_brugtekWh * 2.1);
+                                   var charge10_afregningVerdo = (charge10_pris + charge10_prisOverkort - charge10_godtGorelse);
+                                   var charge10_afregningStrom = charge10_godtGorelse;
+                                   var charge10_totalPris = ((charge10_afregningVerdo) + charge10_afregningStrom);
+
+                                   // Elbil -> Charge15
+                                   var charge15_version = 15;
+                                   var charge15_brugtekWh = kWhPRM;
+                                   var charge15_pris = 374;
+                                   var charge15_Kwh = 225;
+                                   if(charge15_brugtekWh > charge15_Kwh) {
+                                        var charge15_overkort = charge15_brugtekWh - charge15_Kwh;
+                                   } else {
+                                        var charge15_overkort = 0;
+                                   }
+                                   var charge15_prisOverkort = charge15_overkort * 1.75;
+                                   var charge15_godtGorelse = (charge15_brugtekWh * 2.1);
+                                   var charge15_afregningVerdo = (charge15_pris + charge15_prisOverkort - charge15_godtGorelse);
+                                   var charge15_afregningStrom = charge15_godtGorelse;
+                                   var charge15_totalPris = ((charge15_afregningVerdo) + charge15_afregningStrom);
+
+                                   // Elbil -> Charge20
+                                   var charge20_version = 20;
+                                   var charge20_brugtekWh = kWhPRM;
+                                   var charge20_pris = 449;
+                                   var charge20_Kwh = 300;
+                                   if(charge20_brugtekWh > charge20_Kwh) {
+                                        var charge20_overkort = charge20_brugtekWh - charge20_Kwh;
+                                   } else {
+                                        var charge20_overkort = 0;
+                                   }
+                                   var charge20_prisOverkort = charge20_overkort * 1.75;
+                                   var charge20_godtGorelse = (charge20_brugtekWh * 2.1);
+                                   var charge20_afregningVerdo = (charge20_pris + charge20_prisOverkort - charge20_godtGorelse);
+                                   var charge20_afregningStrom = charge20_godtGorelse;
+                                   var charge20_totalPris = ((charge20_afregningVerdo) + charge20_afregningStrom);
+
+                                   // Elbil -> Charge25
+                                   var charge25_version = 25;
+                                   var charge25_brugtekWh = kWhPRM;
+                                   var charge25_pris = 524;
+                                   var charge25_Kwh = 374;
+                                   if(charge25_brugtekWh > charge25_Kwh) {
+                                        var charge25_overkort = charge25_brugtekWh - charge25_Kwh;
+                                   } else {
+                                        var charge25_overkort = 0;
+                                   }
+                                   var charge25_prisOverkort = charge25_overkort * 1.75;
+                                   var charge25_godtGorelse = (charge25_brugtekWh * 2.1);
+                                   var charge25_afregningVerdo = (charge25_pris + charge25_prisOverkort - charge25_godtGorelse);
+                                   var charge25_afregningStrom = charge25_godtGorelse;
+                                   var charge25_totalPris = ((charge25_afregningVerdo) + charge25_afregningStrom);
+
+                                   // Elbil -> Charge30
+                                   var charge30_version = 30;
+                                   var charge30_brugtekWh = kWhPRM;
+                                   var charge30_pris = 599;
+                                   var charge30_Kwh = 450;
+                                   if(charge30_brugtekWh > charge30_Kwh) {
+                                        var charge30_overkort = charge30_brugtekWh - charge30_Kwh;
+                                   } else {
+                                        var charge30_overkort = 0;
+                                   }
+                                   var charge30_prisOverkort = charge30_overkort * 1.75;
+                                   var charge30_godtGorelse = (charge30_brugtekWh * 2.1);
+                                   var charge30_afregningVerdo = (charge30_pris + charge30_prisOverkort - charge30_godtGorelse);
+                                   var charge30_afregningStrom = charge30_godtGorelse;
+                                   var charge30_totalPris = ((charge30_afregningVerdo) + charge30_afregningStrom);
+
+                                   // Elbil -> Charge35
+                                   var charge35_version = 35;
+                                   var charge35_brugtekWh = kWhPRM;
+                                   var charge35_pris = 674;
+                                   var charge35_Kwh = 525;
+                                   if(charge35_brugtekWh > charge35_Kwh) {
+                                        var charge35_overkort = charge35_brugtekWh - charge35_Kwh;
+                                   } else {
+                                        var charge35_overkort = 0;
+                                   }
+                                   var charge35_prisOverkort = charge35_overkort * 1.75;
+                                   var charge35_godtGorelse = (charge35_brugtekWh * 2.1);
+                                   var charge35_afregningVerdo = (charge35_pris + charge35_prisOverkort - charge35_godtGorelse);
+                                   var charge35_afregningStrom = charge35_godtGorelse;
+                                   var charge35_totalPris = ((charge35_afregningVerdo) + charge35_afregningStrom);
+
+                                   // Elbil -> Charge40
+                                   var charge40_version = 40;
+                                   var charge40_brugtekWh = kWhPRM;
+                                   var charge40_pris = 749;
+                                   var charge40_Kwh = 600;
+                                   if(charge40_brugtekWh > charge40_Kwh) {
+                                        var charge40_overkort = charge40_brugtekWh - charge40_Kwh;
+                                   } else {
+                                        var charge40_overkort = 0;
+                                   }
+                                   var charge40_prisOverkort = charge40_overkort * 1.75;
+                                   var charge40_godtGorelse = (charge40_brugtekWh * 2.1);
+                                   var charge40_afregningVerdo = (charge40_pris + charge40_prisOverkort - charge40_godtGorelse);
+                                   var charge40_afregningStrom = charge40_godtGorelse;
+                                   var charge40_totalPris = ((charge40_afregningVerdo) + charge40_afregningStrom);
+
+                                   // Elbil -> Chargefri
+                                   var chargeFRI_version = 0;
+                                   var chargeFRI_brugtekWh = kWhPRM;
+                                   var chargeFRI_pris = 199;
+                                   var chargeFRI_Kwh = chargeFRI_brugtekWh;
+                                   if(chargeFRI_brugtekWh > chargeFRI_Kwh) {
+                                        var chargeFRI_overkort = chargeFRI_brugtekWh - chargeFRI_Kwh;
+                                   } else {
+                                        var chargeFRI_overkort = 0;
+                                   }
+                                   var chargeFRI_prisOverkort = chargeFRI_overkort * 1.75;
+                                   var chargeFRI_godtGorelse = (chargeFRI_brugtekWh * 1.12);
+                                   var chargeFRI_afregningVerdo = (chargeFRI_pris + chargeFRI_prisOverkort - chargeFRI_godtGorelse);
+                                   var chargeFRI_afregningStrom = (chargeFRI_brugtekWh) * 2.1;
+                                   var chargeFRI_totalPris = ((chargeFRI_afregningVerdo) + chargeFRI_afregningStrom);
+
+                                   console.log({chargeFRI_brugtekWh});
+                                   console.log({chargeFRI_overkort});
+                                   console.log({chargeFRI_prisOverkort});
+                                   console.log({chargeFRI_godtGorelse});
+                                   console.log({chargeFRI_afregningVerdo});
+                                   console.log({chargeFRI_afregningStrom});
+                                   console.log({chargeFRI_totalPris});
+
+                              } catch(err) {
+                                   console.log(err.message);
+                              } finally {
+                                   // arrayElbilPrices.push("charge5"+":"+charge5_totalPris, "charge10"+":"+charge10_totalPris, "charge15"+":"+charge15_totalPris, "charge20"+":"+charge20_totalPris, "charge25"+":"+charge25_totalPris, "charge30"+":"+charge30_totalPris, "charge35"+":"+charge35_totalPris, "charge40"+":"+charge40_totalPris, "chargeFRI"+":"+chargeFRI_totalPris);
+                                   arrayElbilPrices.push({"charge_version" : charge5_version, "price" : charge5_totalPris}, {"charge_version" : charge10_version, "price" : charge10_totalPris}, {"charge_version" : charge15_version, "price" : charge15_totalPris}, {"charge_version" : charge20_version, "price" : charge20_totalPris}, {"charge_version" : charge25_version, "price" : charge25_totalPris}, {"charge_version" : charge30_version, "price" : charge30_totalPris}, {"charge_version" : charge35_version, "price" : charge35_totalPris}, {"charge_version" : charge40_version, "price" : charge40_totalPris}, {"charge_version" : chargeFRI_version, "price" : chargeFRI_totalPris});
+                                   console.log(arrayElbilPrices);
+                                   function findBy(arr, key, comparatorFn) {
+                                        return arr.reduce(function(prev, curr, index, arr) {
+                                             return comparatorFn.call(arr, prev[key], curr[key]) ? prev : curr;
+                                        });
+                                   }
+                                   function minComp(prev, curr) {
+                                        return prev < curr;
+                                   }
+
+                                   var resultMinChargeVersion = findBy(arrayElbilPrices, 'price', minComp).charge_version;
+                                   var resultMinChargePrice = findBy(arrayElbilPrices, 'price', minComp).price;
+                                   console.log("Charge " + findBy(arrayElbilPrices, 'price', minComp).charge_version);
+                                   console.log("Total Pris: " + findBy(arrayElbilPrices, 'price', minComp).price);
+                                   $(".result-box").addClass("result-box-shown");
+                                   $(".result-box").html("<h5>Abonnement der passer til dit behov er:</h5><div class='result-box-shown-inner'><h2 class='result-charge-version'>Charge "+resultMinChargeVersion+"</h2><h3 class='result-charge-price'>Total Pris: "+(Math.round(resultMinChargePrice * 100) / 100)+"</h3></div>");
+                                   // min = Math.min.apply(null, arrayElbilPrices.map(function(item) {
+                                   //      return item.price;
+                                   //      console.log(this);
+                                   // })),
+                                   // console.log('min', min);
+                              }
+                         } else {
+                              // --- Hybrid
+                              console.log("HYBRID");
+                              try {
+                                   // Hybrid global
+                                   var bkWh = (antalKM / (raekkevide / bilBatteri)*70)/100;
+                                   var kWhPRM = bkWh / 12.0;
+                                   var sPRkw = 2.1;
+                                   var percentBatteriKM = 70;
+                                   var arrayElbilPrices = [];
+                                   console.log(bkWh);
+
+                                   // Hybrid -> Charge5
+                                   var charge5_version = 5;
+                                   var charge5_brugtekWh = kWhPRM;
+                                   var charge5_pris = 224;
+                                   var charge5_Kwh = 75;
+                                   if(charge5_brugtekWh > charge5_Kwh) {
+                                        var charge5_overkort = charge5_brugtekWh - charge5_Kwh;
+                                   } else {
+                                        var charge5_overkort = 0;
+                                   }
+                                   var charge5_prisOverkort = charge5_overkort * 1.75;
+                                   var charge5_godtGorelse = (charge5_brugtekWh * 2.1);
+                                   var charge5_afregningVerdo = (charge5_pris + charge5_prisOverkort - charge5_godtGorelse);
+                                   var charge5_afregningStrom = charge5_godtGorelse;
+                                   var charge5_totalPris = ((charge5_afregningVerdo) + charge5_afregningStrom);
+
+                                   // Hybrid -> Charge10
+                                   var charge10_version = 10;
+                                   var charge10_brugtekWh = kWhPRM;
+                                   var charge10_pris = 299;
+                                   var charge10_Kwh = 150;
+                                   if(charge10_brugtekWh > charge10_Kwh) {
+                                        var charge10_overkort = charge10_brugtekWh - charge10_Kwh;
+                                   } else {
+                                        var charge10_overkort = 0;
+                                   }
+                                   var charge10_prisOverkort = charge10_overkort * 1.75;
+                                   var charge10_godtGorelse = (charge10_brugtekWh * 2.1);
+                                   var charge10_afregningVerdo = (charge10_pris + charge10_prisOverkort - charge10_godtGorelse);
+                                   var charge10_afregningStrom = charge10_godtGorelse;
+                                   var charge10_totalPris = ((charge10_afregningVerdo) + charge10_afregningStrom);
+
+                                   // Hybrid -> Charge15
+                                   var charge15_version = 15;
+                                   var charge15_brugtekWh = kWhPRM;
+                                   var charge15_pris = 374;
+                                   var charge15_Kwh = 225;
+                                   if(charge15_brugtekWh > charge15_Kwh) {
+                                        var charge15_overkort = charge15_brugtekWh - charge15_Kwh;
+                                   } else {
+                                        var charge15_overkort = 0;
+                                   }
+                                   var charge15_prisOverkort = charge15_overkort * 1.75;
+                                   var charge15_godtGorelse = (charge15_brugtekWh * 2.1);
+                                   var charge15_afregningVerdo = (charge15_pris + charge15_prisOverkort - charge15_godtGorelse);
+                                   var charge15_afregningStrom = charge15_godtGorelse;
+                                   var charge15_totalPris = ((charge15_afregningVerdo) + charge15_afregningStrom);
+
+                                   // Hybrid -> Charge20
+                                   var charge20_version = 20;
+                                   var charge20_brugtekWh = kWhPRM;
+                                   var charge20_pris = 449;
+                                   var charge20_Kwh = 300;
+                                   if(charge20_brugtekWh > charge20_Kwh) {
+                                        var charge20_overkort = charge20_brugtekWh - charge20_Kwh;
+                                   } else {
+                                        var charge20_overkort = 0;
+                                   }
+                                   var charge20_prisOverkort = charge20_overkort * 1.75;
+                                   var charge20_godtGorelse = (charge20_brugtekWh * 2.1);
+                                   var charge20_afregningVerdo = (charge20_pris + charge20_prisOverkort - charge20_godtGorelse);
+                                   var charge20_afregningStrom = charge20_godtGorelse;
+                                   var charge20_totalPris = ((charge20_afregningVerdo) + charge20_afregningStrom);
+
+                                   // Hybrid -> Charge25
+                                   var charge25_version = 25;
+                                   var charge25_brugtekWh = kWhPRM;
+                                   var charge25_pris = 524;
+                                   var charge25_Kwh = 374;
+                                   if(charge25_brugtekWh > charge25_Kwh) {
+                                        var charge25_overkort = charge25_brugtekWh - charge25_Kwh;
+                                   } else {
+                                        var charge25_overkort = 0;
+                                   }
+                                   var charge25_prisOverkort = charge25_overkort * 1.75;
+                                   var charge25_godtGorelse = (charge25_brugtekWh * 2.1);
+                                   var charge25_afregningVerdo = (charge25_pris + charge25_prisOverkort - charge25_godtGorelse);
+                                   var charge25_afregningStrom = charge25_godtGorelse;
+                                   var charge25_totalPris = ((charge25_afregningVerdo) + charge25_afregningStrom);
+
+                                   // Hybrid -> Charge30
+                                   var charge30_version = 30;
+                                   var charge30_brugtekWh = kWhPRM;
+                                   var charge30_pris = 599;
+                                   var charge30_Kwh = 450;
+                                   if(charge30_brugtekWh > charge30_Kwh) {
+                                        var charge30_overkort = charge30_brugtekWh - charge30_Kwh;
+                                   } else {
+                                        var charge30_overkort = 0;
+                                   }
+                                   var charge30_prisOverkort = charge30_overkort * 1.75;
+                                   var charge30_godtGorelse = (charge30_brugtekWh * 2.1);
+                                   var charge30_afregningVerdo = (charge30_pris + charge30_prisOverkort - charge30_godtGorelse);
+                                   var charge30_afregningStrom = charge30_godtGorelse;
+                                   var charge30_totalPris = ((charge30_afregningVerdo) + charge30_afregningStrom);
+
+                                   // Hybrid -> Charge35
+                                   var charge35_version = 35;
+                                   var charge35_brugtekWh = kWhPRM;
+                                   var charge35_pris = 674;
+                                   var charge35_Kwh = 525;
+                                   if(charge35_brugtekWh > charge35_Kwh) {
+                                        var charge35_overkort = charge35_brugtekWh - charge35_Kwh;
+                                   } else {
+                                        var charge35_overkort = 0;
+                                   }
+                                   var charge35_prisOverkort = charge35_overkort * 1.75;
+                                   var charge35_godtGorelse = (charge35_brugtekWh * 2.1);
+                                   var charge35_afregningVerdo = (charge35_pris + charge35_prisOverkort - charge35_godtGorelse);
+                                   var charge35_afregningStrom = charge35_godtGorelse;
+                                   var charge35_totalPris = ((charge35_afregningVerdo) + charge35_afregningStrom);
+
+                                   // Hybrid -> Charge40
+                                   var charge40_version = 40;
+                                   var charge40_brugtekWh = kWhPRM;
+                                   var charge40_pris = 749;
+                                   var charge40_Kwh = 600;
+                                   if(charge40_brugtekWh > charge40_Kwh) {
+                                        var charge40_overkort = charge40_brugtekWh - charge40_Kwh;
+                                   } else {
+                                        var charge40_overkort = 0;
+                                   }
+                                   var charge40_prisOverkort = charge40_overkort * 1.75;
+                                   var charge40_godtGorelse = (charge40_brugtekWh * 2.1);
+                                   var charge40_afregningVerdo = (charge40_pris + charge40_prisOverkort - charge40_godtGorelse);
+                                   var charge40_afregningStrom = charge40_godtGorelse;
+                                   var charge40_totalPris = ((charge40_afregningVerdo) + charge40_afregningStrom);
+
+                                   // Hybrid -> Chargefri
+                                   var chargeFRI_version = 0;
+                                   var chargeFRI_brugtekWh = kWhPRM;
+                                   var chargeFRI_pris = 199;
+                                   var chargeFRI_Kwh = chargeFRI_brugtekWh;
+                                   if(chargeFRI_brugtekWh > chargeFRI_Kwh) {
+                                        var chargeFRI_overkort = chargeFRI_brugtekWh - chargeFRI_Kwh;
+                                   } else {
+                                        var chargeFRI_overkort = 0;
+                                   }
+                                   var chargeFRI_prisOverkort = chargeFRI_overkort * 1.75;
+                                   var chargeFRI_godtGorelse = (chargeFRI_brugtekWh * 1.12);
+                                   var chargeFRI_afregningVerdo = (chargeFRI_pris + chargeFRI_prisOverkort - chargeFRI_godtGorelse);
+                                   var chargeFRI_afregningStrom = (chargeFRI_brugtekWh) * 2.1;
+                                   var chargeFRI_totalPris = ((chargeFRI_afregningVerdo) + chargeFRI_afregningStrom);
+
+                                   console.log({chargeFRI_brugtekWh});
+                                   console.log({chargeFRI_overkort});
+                                   console.log({chargeFRI_prisOverkort});
+                                   console.log({chargeFRI_godtGorelse});
+                                   console.log({chargeFRI_afregningVerdo});
+                                   console.log({chargeFRI_afregningStrom});
+                                   console.log({chargeFRI_totalPris});
+
+                              } catch(err) {
+                                   console.log(err.message);
+                              } finally {
+                                   // arrayElbilPrices.push("charge5"+":"+charge5_totalPris, "charge10"+":"+charge10_totalPris, "charge15"+":"+charge15_totalPris, "charge20"+":"+charge20_totalPris, "charge25"+":"+charge25_totalPris, "charge30"+":"+charge30_totalPris, "charge35"+":"+charge35_totalPris, "charge40"+":"+charge40_totalPris, "chargeFRI"+":"+chargeFRI_totalPris);
+                                   arrayElbilPrices.push({"charge_version" : charge5_version, "price" : charge5_totalPris}, {"charge_version" : charge10_version, "price" : charge10_totalPris}, {"charge_version" : charge15_version, "price" : charge15_totalPris}, {"charge_version" : charge20_version, "price" : charge20_totalPris}, {"charge_version" : charge25_version, "price" : charge25_totalPris}, {"charge_version" : charge30_version, "price" : charge30_totalPris}, {"charge_version" : charge35_version, "price" : charge35_totalPris}, {"charge_version" : charge40_version, "price" : charge40_totalPris}, {"charge_version" : chargeFRI_version, "price" : chargeFRI_totalPris});
+                                   console.log(arrayElbilPrices);
+                                   function findBy(arr, key, comparatorFn) {
+                                        return arr.reduce(function(prev, curr, index, arr) {
+                                             return comparatorFn.call(arr, prev[key], curr[key]) ? prev : curr;
+                                        });
+                                   }
+                                   function minComp(prev, curr) {
+                                        return prev < curr;
+                                   }
+
+                                   var resultMinChargeVersion = findBy(arrayElbilPrices, 'price', minComp).charge_version;
+                                   var resultMinChargePrice = findBy(arrayElbilPrices, 'price', minComp).price;
+                                   console.log("Charge " + findBy(arrayElbilPrices, 'price', minComp).charge_version);
+                                   console.log("Total Pris: " + findBy(arrayElbilPrices, 'price', minComp).price);
+                                   $(".result-box").addClass("result-box-shown");
+                                   $(".result-box").html("<h5>Abonnement der passer til dit behov er:</h5><div class='result-box-shown-inner'><h2 class='result-charge-version'>Charge "+resultMinChargeVersion+"</h2><h3 class='result-charge-price'>Total Pris: "+(Math.round(resultMinChargePrice * 100) / 100)+"</h3></div>");
+                                   // min = Math.min.apply(null, arrayElbilPrices.map(function(item) {
+                                   //      return item.price;
+                                   //      console.log(this);
+                                   // })),
+                                   // console.log('min', min);
+                              }
+                         }
+
+                         evt.preventDefault();
+                         window.history.back();
+                    });
                });
           </script>
           <!-- JS END -->
