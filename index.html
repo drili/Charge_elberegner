@@ -5,7 +5,6 @@
     <!-- NO INDEX -->
     <meta name="robots" content="noindex">
     <meta charset="">
-    <meta name="facebook-domain-verification" content="qto6avkj47z3l27k4hi8r7nuhid8w2" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Test</title>
 
@@ -368,6 +367,7 @@
             font-size: 30px;
             font-weight: bold;
             transition: all ease-in 0.3s;
+            border: 2px solid #fff;
         }
         .element_beregner .submit-button input:hover {
             cursor: pointer;
@@ -520,6 +520,49 @@
             display: flex;
             align-items: center;
         }
+        .element_beregner .cell-question-p {
+            position: relative;
+        }
+        .element_beregner .question-box a {
+            color: #91c41a;
+        }
+        .element_beregner .question-box {
+            position: absolute;
+            width: 500px;
+            top: 5px;
+            left: 0;
+            left: 80%;
+            background: #fff;
+            z-index: 999;
+            opacity: 0;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 10px 5px;
+            display: none;
+        }
+        .element_beregner .cell-question-p-1:hover .question-box.question-1 {
+            display: block;
+            opacity: 1;
+        }
+        .element_beregner .cell-question-p-2:hover .question-box.question-2 {
+            display: block;
+            opacity: 1;
+        }
+        .element_beregner .cell-question-p-3:hover .question-box.question-3 {
+            display: block;
+            opacity: 1;
+        }
+        @media screen and (max-width: 1024px) {
+            .element_beregner .question-box {
+                display: none !important;
+            }
+            .submit-button {
+                margin-top: 40px;
+            }
+            .element_beregner .cell-beregner form {
+                padding: 30px 20px;
+            }
+        }
     </style>
     <!-- CSS END -->
 
@@ -544,7 +587,7 @@
     <div class="element_beregner custom-container">
         <div class="element_beregner-inner">
             <div class="grid-x grid-x-main">
-                <div class="cell small-8 cell-beregner">
+                <div class="cell small-10 large-8 cell-beregner">
                     <div class="grid-x">
                         <div class="cell small-12 cell-main-title">
                             <h3>Find dit abonnement her</h3>
@@ -554,7 +597,7 @@
                     <form id="form_one" class="beregner-form">
                         <!-- <p>One</p> -->
                         <div class="grid-x grid-x-form">
-                            <div class="cell small-6">
+                            <div class="cell small-12 large-6">
 
                                 <div class="grid-x">
                                     <div class="cell small-12">
@@ -565,8 +608,9 @@
                                                     <input type="text" id="batteri-storrelse" name="batteri-storrelse" onkeypress="validateNumber(event)">
                                                 </div>
                                                 <div class="cell small-2 cell-question">
-                                                    <div class="cell-question-p">
+                                                    <div class="cell-question-p cell-question-p-1">
                                                         <p><i class="fa fa-question-circle"></i></p>
+                                                        <p class="question-box question-1">Du kan som regel finde denne information i bilens brugermanual eller ved en google søgning. Vi kan også hjælpe dig - <a href="https://www.charge.dk/contact-us">Tryk her for at skrive til os.</a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -581,8 +625,9 @@
                                                     <input type="text" id="raekkevide" name="raekkevide" onkeypress="validateNumber(event)">
                                                 </div>
                                                 <div class="cell small-2 cell-question">
-                                                    <div class="cell-question-p">
+                                                    <div class="cell-question-p cell-question-p-2">
                                                         <p><i class="fa fa-question-circle"></i></p>
+                                                        <p class="question-box question-2">Du kan som regel finde denne information i bilens brugermanual eller ved en google søgning. Vi kan også hjælpe dig - <a href="https://www.charge.dk/contact-us">Tryk her for at skrive til os.</a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -597,8 +642,9 @@
                                                     <input type="text" id="antal-km" name="antal-km" onkeypress="validateNumber(event)">
                                                 </div>
                                                 <div class="cell small-2 cell-question">
-                                                    <div class="cell-question-p">
+                                                    <div class="cell-question-p cell-question-p-2">
                                                         <p><i class="fa fa-question-circle"></i></p>
+                                                        <p class="question-box question-2">En almindelig familie kører som regel mellem 15-20.000 km om året. Vi hjælper dig gerne med at finde det rigtige antal kilometer til dit forbrug - <a href="https://www.charge.dk/contact-us">Tryk her for at skrive til os.</a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -607,7 +653,7 @@
                                 </div>
                             </div>
 
-                            <div class="cell small-6">
+                            <div class="cell small-12 large-6">
                                 <div class="hidden-input">
                                     <input type="hidden" name="form_hidden_val" value="form_one">
                                 </div>
@@ -626,7 +672,7 @@
                     <form id="form_two" class="beregner-form">
                         <!-- <p>Two</p> -->
                         <div class="grid-x grid-x-form">
-                            <div class="cell small-6">
+                            <div class="cell small-12 large-6">
                                 <div class="grid-x">
                                     <div class="cell small-12">
                                         <div class="batteri-storrelse">
@@ -636,8 +682,9 @@
                                                     <input type="text" id="batteri-storrelse" name="batteri-storrelse" onkeypress="validateNumber(event)">
                                                 </div>
                                                 <div class="cell small-2 cell-question">
-                                                    <div class="cell-question-p">
+                                                    <div class="cell-question-p cell-question-p-1">
                                                         <p><i class="fa fa-question-circle"></i></p>
+                                                        <p class="question-box question-1">Du kan som regel finde denne information i bilens brugermanual eller ved en google søgning. Vi kan også hjælpe dig - <a href="https://www.charge.dk/contact-us">Tryk her for at skrive til os.</a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -651,8 +698,9 @@
                                                     <input type="text" id="raekkevide" name="raekkevide" onkeypress="validateNumber(event)">
                                                 </div>
                                                 <div class="cell small-2 cell-question">
-                                                    <div class="cell-question-p">
+                                                    <div class="cell-question-p cell-question-p-2">
                                                         <p><i class="fa fa-question-circle"></i></p>
+                                                        <p class="question-box question-2">Du kan som regel finde denne information i bilens brugermanual eller ved en google søgning. Vi kan også hjælpe dig - <a href="https://www.charge.dk/contact-us">Tryk her for at skrive til os.</a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -667,7 +715,10 @@
                                                 </div>
                                                 <div class="cell small-2 cell-question">
                                                     <div class="cell-question-p">
-                                                        <p><i class="fa fa-question-circle"></i></p>
+                                                        <div class="cell-question-p cell-question-p-2">
+                                                            <p><i class="fa fa-question-circle"></i></p>
+                                                            <p class="question-box question-2">En almindelig familie kører som regel mellem 15-20.000 km om året. Vi hjælper dig gerne med at finde det rigtige antal kilometer til dit forbrug - <a href="https://www.charge.dk/contact-us">Tryk her for at skrive til os.</a></p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -676,7 +727,7 @@
                                 </div>
                             </div>
 
-                            <div class="cell small-6">
+                            <div class="cell small-12 large-6">
                                 <div class="hidden-input">
                                     <input type="hidden" name="form_hidden_val" value="form_two">
                                 </div>
@@ -712,10 +763,6 @@
             </div>
         </div>
     </div>
-
-    <footer>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores neque commodi, dignissimos, temporibus inventore ut sit vero consequatur facilis maxime doloremque debitis voluptate. Quam, debitis, veritatis. Fugit explicabo illum quis.
-    </footer>
     <!-- HTML END -->
 
     <!-- JS START -->
@@ -954,31 +1001,49 @@
                         // arrayElbilPrices.push("charge5"+":"+charge5_totalPris, "charge10"+":"+charge10_totalPris, "charge15"+":"+charge15_totalPris, "charge20"+":"+charge20_totalPris, "charge25"+":"+charge25_totalPris, "charge30"+":"+charge30_totalPris, "charge35"+":"+charge35_totalPris, "charge40"+":"+charge40_totalPris, "chargeFRI"+":"+chargeFRI_totalPris);
                         arrayElbilPrices.push({
                             "charge_version": charge5_version,
-                            "price": charge5_totalPris
+                            "price": charge5_totalPris,
+                            "url": "#",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-5-1000388"
                         }, {
                             "charge_version": charge10_version,
-                            "price": charge10_totalPris
+                            "price": charge10_totalPris,
+                            "url": "https://i.imgur.com/FR1I3W3.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-10-1000389"
                         }, {
                             "charge_version": charge15_version,
-                            "price": charge15_totalPris
+                            "price": charge15_totalPris,
+                            "url": "https://i.imgur.com/bbKfU0o.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-15-1000390"
                         }, {
                             "charge_version": charge20_version,
-                            "price": charge20_totalPris
+                            "price": charge20_totalPris,
+                            "url": "https://i.imgur.com/bjYUhsD.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-20-1000391"
                         }, {
                             "charge_version": charge25_version,
-                            "price": charge25_totalPris
+                            "price": charge25_totalPris,
+                            "url": "https://i.imgur.com/aNZyu70.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-25-1000392"
                         }, {
                             "charge_version": charge30_version,
-                            "price": charge30_totalPris
+                            "price": charge30_totalPris,
+                            "url": "https://i.imgur.com/FJStdRB.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-30-1000393"
                         }, {
                             "charge_version": charge35_version,
-                            "price": charge35_totalPris
+                            "price": charge35_totalPris,
+                            "url": "https://i.imgur.com/58bvoNS.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-35-1000394"
                         }, {
                             "charge_version": charge40_version,
-                            "price": charge40_totalPris
+                            "price": charge40_totalPris,
+                            "url": "https://i.imgur.com/nAa58rj.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-40-1000395"
                         }, {
                             "charge_version": chargeFRI_version,
-                            "price": chargeFRI_totalPris
+                            "price": chargeFRI_totalPris,
+                            "url": "https://i.imgur.com/qZnbC48.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-fri-1000387"
                         });
                         console.log(arrayElbilPrices);
 
@@ -994,11 +1059,15 @@
 
                         var resultMinChargeVersion = findBy(arrayElbilPrices, 'price', minComp).charge_version;
                         var resultMinChargePrice = findBy(arrayElbilPrices, 'price', minComp).price;
+                        var resultMinChargeURL = findBy(arrayElbilPrices, 'price', minComp).url;
+                        var resultMinChargeLinkURL = findBy(arrayElbilPrices, 'price', minComp).linkUrl;
                         console.log("Charge " + findBy(arrayElbilPrices, 'price', minComp).charge_version);
                         console.log("Total Pris: " + findBy(arrayElbilPrices, 'price', minComp).price);
                         $(".result-box").addClass("result-box-shown");
-                        $(".result-box").html("<h5>Abonnement der passer til dit behov er:</h5><div class='result-box-shown-inner'><h2 class='result-charge-version'>Charge " + resultMinChargeVersion +
-                            "</h2><h3 class='result-charge-price'>Total Pris: " + (Math.round(resultMinChargePrice * 100) / 100) + "</h3></div>");
+                        // $(".result-box").html("<h5>Abonnement der passer til dit behov er:</h5><div class='result-box-shown-inner'><h2 class='result-charge-version'>Charge " + resultMinChargeVersion +
+                        //     "</h2><h3 class='result-charge-price'>Total Pris: " + (Math.round(resultMinChargePrice * 100) / 100) + "</h3></div>");
+                        $(".result-box").html("<div class='result-box-shown-inner'><h5 style='color:#fff;'>Abonnement der passer til dit behov er:</h5><a href='"+resultMinChargeLinkURL+"'><img src='"+resultMinChargeURL+"' referrerpolicy='no-referrer'></a></div>");
+
                         // min = Math.min.apply(null, arrayElbilPrices.map(function(item) {
                         //      return item.price;
                         //      console.log(this);
@@ -1189,31 +1258,49 @@
                         // arrayElbilPrices.push("charge5"+":"+charge5_totalPris, "charge10"+":"+charge10_totalPris, "charge15"+":"+charge15_totalPris, "charge20"+":"+charge20_totalPris, "charge25"+":"+charge25_totalPris, "charge30"+":"+charge30_totalPris, "charge35"+":"+charge35_totalPris, "charge40"+":"+charge40_totalPris, "chargeFRI"+":"+chargeFRI_totalPris);
                         arrayElbilPrices.push({
                             "charge_version": charge5_version,
-                            "price": charge5_totalPris
+                            "price": charge5_totalPris,
+                            "url": "#",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-5-1000388"
                         }, {
                             "charge_version": charge10_version,
-                            "price": charge10_totalPris
+                            "price": charge10_totalPris,
+                            "url": "https://i.imgur.com/FR1I3W3.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-10-1000389"
                         }, {
                             "charge_version": charge15_version,
-                            "price": charge15_totalPris
+                            "price": charge15_totalPris,
+                            "url": "https://i.imgur.com/bbKfU0o.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-15-1000390"
                         }, {
                             "charge_version": charge20_version,
-                            "price": charge20_totalPris
+                            "price": charge20_totalPris,
+                            "url": "https://i.imgur.com/bjYUhsD.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-20-1000391"
                         }, {
                             "charge_version": charge25_version,
-                            "price": charge25_totalPris
+                            "price": charge25_totalPris,
+                            "url": "https://i.imgur.com/aNZyu70.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-25-1000392"
                         }, {
                             "charge_version": charge30_version,
-                            "price": charge30_totalPris
+                            "price": charge30_totalPris,
+                            "url": "https://i.imgur.com/FJStdRB.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-30-1000393"
                         }, {
                             "charge_version": charge35_version,
-                            "price": charge35_totalPris
+                            "price": charge35_totalPris,
+                            "url": "https://i.imgur.com/58bvoNS.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-35-1000394"
                         }, {
                             "charge_version": charge40_version,
-                            "price": charge40_totalPris
+                            "price": charge40_totalPris,
+                            "url": "https://i.imgur.com/nAa58rj.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-40-1000395"
                         }, {
                             "charge_version": chargeFRI_version,
-                            "price": chargeFRI_totalPris
+                            "price": chargeFRI_totalPris,
+                            "url": "https://i.imgur.com/qZnbC48.png",
+                            "linkUrl": "https://www.charge.dk/abonnementer/charge-fri-1000387"
                         });
                         console.log(arrayElbilPrices);
 
@@ -1229,11 +1316,15 @@
 
                         var resultMinChargeVersion = findBy(arrayElbilPrices, 'price', minComp).charge_version;
                         var resultMinChargePrice = findBy(arrayElbilPrices, 'price', minComp).price;
+                        var resultMinChargeURL = findBy(arrayElbilPrices, 'price', minComp).url;
+                        var resultMinChargeLinkURL = findBy(arrayElbilPrices, 'price', minComp).linkUrl;
                         console.log("Charge " + findBy(arrayElbilPrices, 'price', minComp).charge_version);
                         console.log("Total Pris: " + findBy(arrayElbilPrices, 'price', minComp).price);
                         $(".result-box").addClass("result-box-shown");
-                        $(".result-box").html("<h5>Abonnement der passer til dit behov er:</h5><div class='result-box-shown-inner'><h2 class='result-charge-version'>Charge " + resultMinChargeVersion +
-                            "</h2><h3 class='result-charge-price'>Total Pris: " + (Math.round(resultMinChargePrice * 100) / 100) + "</h3></div>");
+                        // $(".result-box").html("<h5>Abonnement der passer til dit behov er:</h5><div class='result-box-shown-inner'><h2 class='result-charge-version'>Charge " + resultMinChargeVersion +
+                        //     "</h2><h3 class='result-charge-price'>Total Pris: " + (Math.round(resultMinChargePrice * 100) / 100) + "</h3></div>");
+                        $(".result-box").html("<div class='result-box-shown-inner'><h5 style='color:#fff;'>Abonnement der passer til dit behov er:</h5><a href='"+resultMinChargeLinkURL+"'><img src='"+resultMinChargeURL+"' referrerpolicy='no-referrer'></a></div>");
+
                         // min = Math.min.apply(null, arrayElbilPrices.map(function(item) {
                         //      return item.price;
                         //      console.log(this);
