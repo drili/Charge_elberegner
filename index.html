@@ -1,572 +1,4 @@
-<!DOCTYPE html>
-<html dir="ltr">
-
-<head>
-    <!-- NO INDEX -->
-    <meta name="robots" content="noindex">
-    <meta charset="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Test</title>
-
-    <!-- Fonts  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="//db.onlinewebfonts.com/c/0fb11be8781037453723dda767b71596?family=Geogrotesque" rel="stylesheet" type="text/css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;700&display=swap" rel="stylesheet">
-
-    <!-- ZURB Foundation -->
-    <!-- Compressed CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
-    <!-- Compressed JavaScript -->
-
-    <!-- Font Awesome -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    <!-- Slick CSS / JS -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-</head>
-
-<body>
-    <!-- CSS START -->
-    <style>
-        /* Foundation Breakpoints */
-        /*
-                    small: 0px,
-                    medium: 640px,
-                    large: 1024px,
-                    xlarge: 1200px,
-                    xxlarge: 1440px,
-               */
-
-        /* Responsive Absolute Center */
-        /*
-                    position: absolute;
-                    left: 50%;
-                    transform: translate(-50%, 0);
-               */
-
-        /* Fonts */
-        /*
-                    font-family: 'Barlow', sans-serif; (paragraphs)
-                    font-family: 'Ubuntu', sans-serif; (headings)
-               */
-        /* -----------------------------------------------------------------------------
-               Reset CSS [START]
-                ---------------------------------------------------------------------------- */
-        html,
-        body,
-        div,
-        span,
-        object,
-        iframe,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        blockquote,
-        pre,
-        abbr,
-        address,
-        cite,
-        code,
-        del,
-        dfn,
-        em,
-        img,
-        ins,
-        kbd,
-        q,
-        samp,
-        small,
-        strong,
-        sub,
-        sup,
-        var,
-        b,
-        i,
-        dl,
-        dt,
-        dd,
-        ol,
-        ul,
-        li,
-        fieldset,
-        form,
-        label,
-        legend,
-        table,
-        caption,
-        tbody,
-        tfoot,
-        thead,
-        tr,
-        th,
-        td,
-        article,
-        aside,
-        canvas,
-        details,
-        figcaption,
-        figure,
-        footer,
-        header,
-        hgroup,
-        menu,
-        nav,
-        section,
-        summary,
-        time,
-        mark,
-        audio,
-        video,
-        button {
-            margin: 0;
-            padding: 0;
-            border: 0;
-            outline: 0;
-            /* font-size:100%; */
-            vertical-align: baseline;
-            background: transparent;
-            /* font-family: "Geogrotesque"; */
-            font-family: 'Titillium Web', sans-serif;
-        }
-
-        *,
-        html {
-            scroll-behavior: smooth;
-            background-repeat: no-repeat;
-            background-size: cover;
-            /* font-family: "Geogrotesque"; */
-            font-family: 'Titillium Web', sans-serif;
-        }
-
-        div,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        blockquote,
-        pre,
-        dfn,
-        em,
-        small,
-        strong,
-        sub,
-        sup,
-        var,
-        b,
-        dl,
-        dt,
-        dd,
-        ol,
-        ul,
-        li,
-        fieldset,
-        form,
-        label,
-        legend,
-        table,
-        caption,
-        tbody,
-        tfoot,
-        thead,
-        tr,
-        th,
-        td,
-        article,
-        footer {
-            /* font-family: "Geogrotesque"; */
-            font-family: 'Titillium Web', sans-serif;
-            color: #00213C;
-        }
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-weight: 400;
-        }
-
-        body {
-            line-height: 0;
-            overflow-x: hidden;
-            max-width: 2000px;
-            margin: 0 auto;
-        }
-
-        footer {
-            line-height: 1;
-        }
-
-        ._form-content {
-            overflow: hidden;
-        }
-
-        article,
-        aside,
-        details,
-        figcaption,
-        figure,
-        footer,
-        header,
-        hgroup,
-        menu,
-        nav,
-        section {
-            display: block;
-        }
-
-        nav ul {
-            list-style: none;
-        }
-
-        blockquote,
-        q {
-            quotes: none;
-        }
-
-        blockquote:before,
-        blockquote:after,
-        q:before,
-        q:after {
-            content: '';
-            content: none;
-        }
-
-        a {
-            font-family: 'Barlow', sans-serif;
-            color: #00213C;
-            margin: 0;
-            padding: 0;
-            font-size: 100%;
-            vertical-align: baseline;
-            background: transparent;
-            line-height: normal;
-        }
-
-        ins {
-            background-color: #ff9;
-            color: #000;
-            text-decoration: none;
-        }
-
-        mark {
-            background-color: #ff9;
-            color: #000;
-            font-style: italic;
-            font-weight: bold;
-        }
-
-        del {
-            text-decoration: line-through;
-        }
-
-        table {
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-
-        hr {
-            display: block;
-            height: 1px;
-            border: 0;
-            border-top: 1px solid #cccccc;
-            margin: 1em 0;
-            padding: 0;
-        }
-
-        input,
-        select {
-            vertical-align: middle;
-        }
-
-        /* -----------------------------------------------------------------------------
-               Reset CSS [END]
-                ---------------------------------------------------------------------------- */
-        body {
-            max-width: 2000px;
-            margin: 0 auto;
-        }
-
-        .element_beregner_picker .cell-picker {
-            margin: 0 auto;
-        }
-
-        .element_beregner .grid-x-input {
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .element_beregner .cell-beregner {
-            margin: 0 auto;
-            min-height: 470px;
-        }
-
-        .element_beregner .cell-beregner form {
-            background: #005844;
-            padding: 60px 40px;
-            box-shadow: -5px 18px 60px 0 rgb(210 210 234 / 40%);
-        }
-
-        .element_beregner .cell-beregner form label {
-            color: #fff;
-        }
-
-        .element_beregner .cell-question {
-            text-align: center;
-        }
-
-        .element_beregner .cell-question p {
-            /* background: #000;
-                     border-radius: 100%;
-                     width: 30px;
-                     height: 30px;
-                     color: #fff;
-                     display: inline-block; */
-        }
-
-        .element_beregner .cell-question i {
-            font-size: 16px;
-        }
-
-        .element_beregner input {
-            margin-bottom: 0;
-            border-radius: 5px;
-        }
-
-        .element_beregner .submit-button {
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .element_beregner .submit-button input {
-            padding: 15px 30px;
-            color: #005844;
-            background: none;
-            border: none;
-            position: relative;
-            z-index: 10;
-            width: 150px;
-            height: 150px;
-            background: #D9E6E3;
-            border-radius: 100%;
-            font-size: 30px;
-            font-weight: bold;
-            transition: all ease-in 0.3s;
-            border: 2px solid #fff;
-        }
-        .element_beregner .submit-button input:hover {
-            cursor: pointer;
-            box-shadow: 0 22px 34px 0 rgba(0,0,0,.15);
-            transition: all ease-in 0.3s;
-        }
-        .element_beregner .submit-button {
-            position: relative;
-        }
-
-        .element_beregner_picker .button-picker {
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
-        }
-
-        .element_beregner_picker .grid-x-main-picker {
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .element_beregner_picker .button-picker button {
-            border: 1px solid #91c41a;
-            padding: 20px 40px;
-            color: #91c41a;
-            cursor: pointer;
-        }
-        .element_beregner_picker .button-picker .button-picker-one button {
-            border-radius: 3px 0 0 3px;
-        }
-        .element_beregner_picker .button-picker .button-picker-two button {
-            border-radius: 0 3px 3px 0;
-        }
-
-        .custom-container {
-            margin-bottom: 40px;
-        }
-
-        .element_beregner_picker .button-picker button.selected {
-            /* background: #91c41a; */
-            color: #fff;
-            position: relative;
-        }
-
-        .element_beregner_picker .button-picker button.selected::after {
-            content: "";
-            width: 0%;
-            height: 100%;
-            background: #91c41a;
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: -1;
-            animation-name: buttonAnimationSelected;
-            animation-duration: 0.5s;
-            animation-fill-mode: forwards;
-            animation-timing-function: cubic-bezier(0.3, 0.9, 0.5, 0.9);
-            animation-delay: 0.2s;
-        }
-
-        @keyframes buttonAnimationSelected {
-            0% {
-                width: 0%;
-            }
-
-            100% {
-                width: 100%;
-            }
-        }
-
-        .element_beregner_picker .button-picker button.not-selected {
-            /* background: #91c41a; */
-            color: #91c41a;
-            position: relative;
-        }
-
-        .element_beregner_picker .button-picker button.not-selected::after {
-            content: "";
-            width: 100%;
-            height: 100%;
-            background: #91c41a;
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: -1;
-            animation-name: buttonAnimationNotSelected;
-            animation-duration: 0.5s;
-            animation-fill-mode: forwards;
-            animation-timing-function: cubic-bezier(0.3, 0.9, 0.5, 0.9);
-            animation-delay: 0.2s;
-        }
-
-        @keyframes buttonAnimationNotSelected {
-            0% {
-                width: 100%;
-            }
-
-            100% {
-                width: 0%;
-            }
-        }
-
-        .element_beregner .beregner-form {
-            display: none;
-        }
-
-        .element_beregner .cell-main-title {
-            position: relative;
-        }
-        .element_beregner .cell-main-title h3 {
-            /* position: absolute;
-            top: -40px; */
-            background: #fff;
-            /* padding: 10px 40px; */
-            z-index: 999;
-            box-shadow: 0 22px 34px 0 rgba(0,0,0,.15);
-            /* left: 50%;
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%); */
-            /* color: #005844 !important; */
-            padding: 20px 40px;
-        }
-
-        .elberegner_result .cell-price {
-            margin: 0 auto;
-        }
-
-        .elberegner_result .cell-price-inner {
-            text-align: center;
-        }
-
-        .elberegner_result .result-box.result-box-shown .result-box-shown-inner {
-            display: inline-block;
-            flex-direction: column;
-            background: #005844;
-            padding: 40px 60px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .elberegner_result .result-box.result-box-shown h5 {
-            margin-bottom: 20px;
-        }
-
-        .elberegner_result .result-box.result-box-shown h2,
-        .elberegner_result .result-box.result-box-shown h3 {
-            color: #fff;
-        }
-        .element_beregner .grid-x-form {
-            display: flex;
-            align-items: center;
-        }
-        .element_beregner .cell-question-p {
-            position: relative;
-        }
-        .element_beregner .question-box a {
-            color: #91c41a;
-        }
-        .element_beregner .question-box {
-            position: absolute;
-            width: 500px;
-            top: 5px;
-            left: 0;
-            left: 80%;
-            background: #fff;
-            z-index: 999;
-            opacity: 0;
-            font-size: 14px;
-            cursor: pointer;
-            padding: 10px 5px;
-            display: none;
-        }
-        .element_beregner .cell-question-p-1:hover .question-box.question-1 {
-            display: block;
-            opacity: 1;
-        }
-        .element_beregner .cell-question-p-2:hover .question-box.question-2 {
-            display: block;
-            opacity: 1;
-        }
-        .element_beregner .cell-question-p-3:hover .question-box.question-3 {
-            display: block;
-            opacity: 1;
-        }
-        @media screen and (max-width: 1024px) {
-            .element_beregner .question-box {
-                display: none !important;
-            }
-            .submit-button {
-                margin-top: 40px;
-            }
-            .element_beregner .cell-beregner form {
-                padding: 30px 20px;
-            }
-        }
-    </style>
-    <!-- CSS END -->
-
-    <!-- HTML START -->
+<!-- HTML START -->
     <div class="element_beregner_picker custom-container">
         <div class="element_beregner_picker-inner">
             <div class="grid-x grid-x-main-picker">
@@ -576,7 +8,7 @@
                             <button id="one" class="selected">Elbil</button>
                         </span>
                         <span class="button-picker-two">
-                            <button id="two">Hybrid</button>
+                            <button id="two">Plug-in-Hybrid</button>
                         </span>
                     </div>
                 </div>
@@ -602,15 +34,16 @@
                                 <div class="grid-x">
                                     <div class="cell small-12">
                                         <div class="batteri-storrelse">
-                                            <label for="batteri-storrelse">Størelse på bilens batteri:</label><br>
+                                            <label for="batteri-storrelse">Størrelse på bilens batteri:</label>
                                             <div class="grid-x grid-x-input">
-                                                <div class="cell small-10">
-                                                    <input type="text" id="batteri-storrelse" name="batteri-storrelse" onkeypress="validateNumber(event)">
+                                                <div class="cell small-11" style="display:flex;align-items:center;">
+                                                    <input type="text" id="batteri-storrelse" name="batteri-storrelse" onkeypress="validateNumber(event)" style="max-width: 80%;margin-right:15px;"><label>kWh</label>
                                                 </div>
-                                                <div class="cell small-2 cell-question">
+                                                <div class="cell small-1 cell-question">
                                                     <div class="cell-question-p cell-question-p-1">
                                                         <p><i class="fa fa-question-circle"></i></p>
-                                                        <p class="question-box question-1">Du kan som regel finde denne information i bilens brugermanual eller ved en google søgning. Vi kan også hjælpe dig - <a href="https://www.charge.dk/contact-us">Tryk her for at skrive til os.</a></p>
+                                                        <p class="question-box question-1">Et typisk bilbatteri i en mellemstor elbil er på 60 kWh. Du kan som udgangspunkt finde disse oplysninger i bilens tekniske specifikationer oplyst af producenten eller bilforhandleren.
+Charge kan også hjælpe dig. <a href="https://www.charge.dk/contact-us">Klik her for at skrive til os.</a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -619,15 +52,17 @@
 
                                     <div class="cell small-12">
                                         <div class="raekkevide">
-                                            <label for="raekkevide">Bilens raekkevide ved fuld opladning:</label><br>
+                                            <label for="raekkevide">Bilens rækkevidde ved fuld opladning:</label>
                                             <div class="grid-x grid-x-input">
-                                                <div class="cell small-10">
-                                                    <input type="text" id="raekkevide" name="raekkevide" onkeypress="validateNumber(event)">
+                                                <div class="cell small-11" style="display:flex;align-items:center;">
+                                                    <input type="text" id="raekkevide" name="raekkevide" onkeypress="validateNumber(event)" style="max-width: 80%;margin-right:15px;"><label>km</label>
                                                 </div>
-                                                <div class="cell small-2 cell-question">
+                                                <div class="cell small-1 cell-question">
                                                     <div class="cell-question-p cell-question-p-2">
                                                         <p><i class="fa fa-question-circle"></i></p>
-                                                        <p class="question-box question-2">Du kan som regel finde denne information i bilens brugermanual eller ved en google søgning. Vi kan også hjælpe dig - <a href="https://www.charge.dk/contact-us">Tryk her for at skrive til os.</a></p>
+                                                        <p class="question-box question-2">Elbilers rækkevidde afhænger af kørselsmønster og temperatur. En gennemsnitlig elbil kan typisk køre omkring 350 km på et fuldt opladet batteri.
+Du kan som udgangspunkt finde disse oplysninger i bilens tekniske specifikationer oplyst af producenten eller bilforhandleren.
+Charge kan også hjælpe dig. <a href="https://www.charge.dk/contact-us">Klik her for at skrive til os.</a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -636,15 +71,15 @@
 
                                     <div class="cell small-12">
                                         <div class="antal-km">
-                                            <label for="antal-km">Antal kørte km om året:</label><br>
+                                            <label for="antal-km">Antal kørte km om året:</label>
                                             <div class="grid-x grid-x-input">
-                                                <div class="cell small-10">
-                                                    <input type="text" id="antal-km" name="antal-km" onkeypress="validateNumber(event)">
+                                                <div class="cell small-11" style="display:flex;align-items:center;">
+                                                    <input type="text" id="antal-km" name="antal-km" onkeypress="validateNumber(event)" style="max-width: 80%;margin-right:15px;"><label>km</label>
                                                 </div>
-                                                <div class="cell small-2 cell-question">
+                                                <div class="cell small-1 cell-question">
                                                     <div class="cell-question-p cell-question-p-2">
                                                         <p><i class="fa fa-question-circle"></i></p>
-                                                        <p class="question-box question-2">En almindelig familie kører som regel mellem 15-20.000 km om året. Vi hjælper dig gerne med at finde det rigtige antal kilometer til dit forbrug - <a href="https://www.charge.dk/contact-us">Tryk her for at skrive til os.</a></p>
+                                                        <p class="question-box question-2">En almindelig familie kører som regel mellem 15-20.000 km om året.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -676,15 +111,17 @@
                                 <div class="grid-x">
                                     <div class="cell small-12">
                                         <div class="batteri-storrelse">
-                                            <label for="batteri-storrelse">Størelse på bilens batteri:</label><br>
+                                            <label for="batteri-storrelse">Størrelse på bilens batteri:</label>
                                             <div class="grid-x grid-x-input">
-                                                <div class="cell small-10">
-                                                    <input type="text" id="batteri-storrelse" name="batteri-storrelse" onkeypress="validateNumber(event)">
+                                                <div class="cell small-11" style="display:flex;align-items:center;">
+                                                    <input type="text" id="batteri-storrelse" name="batteri-storrelse" onkeypress="validateNumber(event)" style="max-width: 80%;margin-right:15px;"><label>kWh</label>
                                                 </div>
-                                                <div class="cell small-2 cell-question">
+                                                <div class="cell small-1 cell-question">
                                                     <div class="cell-question-p cell-question-p-1">
                                                         <p><i class="fa fa-question-circle"></i></p>
-                                                        <p class="question-box question-1">Du kan som regel finde denne information i bilens brugermanual eller ved en google søgning. Vi kan også hjælpe dig - <a href="https://www.charge.dk/contact-us">Tryk her for at skrive til os.</a></p>
+                                                        <p class="question-box question-1">Et typisk bilbatteri i en plug-in hybrid er på 9,8 kWh.
+Du kan som udgangspunkt finde disse oplysninger i bilens tekniske specifikationer oplyst af producenten eller bilforhandleren.
+Charge kan også hjælpe dig. <a href="https://www.charge.dk/contact-us">Klik her for at skrive til os.</a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -692,15 +129,17 @@
                                     </div>
                                     <div class="cell small-12">
                                         <div class="raekkevide">
-                                            <label for="raekkevide">Bilens raekkevide ved fuld opladning:</label><br>
+                                            <label for="raekkevide">Bilens rækkevidde ved fuld opladning:</label>
                                             <div class="grid-x grid-x-input">
-                                                <div class="cell small-10">
-                                                    <input type="text" id="raekkevide" name="raekkevide" onkeypress="validateNumber(event)">
+                                                <div class="cell small-11" style="display:flex;align-items:center;">
+                                                    <input type="text" id="raekkevide" name="raekkevide" onkeypress="validateNumber(event)" style="max-width: 80%;margin-right:15px;"><label>km</label>
                                                 </div>
-                                                <div class="cell small-2 cell-question">
+                                                <div class="cell small-1 cell-question">
                                                     <div class="cell-question-p cell-question-p-2">
                                                         <p><i class="fa fa-question-circle"></i></p>
-                                                        <p class="question-box question-2">Du kan som regel finde denne information i bilens brugermanual eller ved en google søgning. Vi kan også hjælpe dig - <a href="https://www.charge.dk/contact-us">Tryk her for at skrive til os.</a></p>
+                                                        <p class="question-box question-2">En plug-in hybridbils rækkevidde udelukkende på el er typisk omkring 50 km.
+Du kan som udgangspunkt finde disse oplysninger i bilens tekniske specifikationer oplyst af producenten eller bilforhandleren.
+Charge kan også hjælpe dig. <a href="https://www.charge.dk/contact-us">Klik her for at skrive til os.</a></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -708,16 +147,16 @@
                                     </div>
                                     <div class="cell small-12">
                                         <div class="antal-km">
-                                            <label for="antal-km">Antal kørte km om året:</label><br>
+                                            <label for="antal-km">Antal kørte km om året:</label>
                                             <div class="grid-x grid-x-input">
-                                                <div class="cell small-10">
-                                                    <input type="text" id="antal-km" name="antal-km" onkeypress="validateNumber(event)">
+                                                <div class="cell small-11" style="display:flex;align-items:center;">
+                                                    <input type="text" id="antal-km" name="antal-km" onkeypress="validateNumber(event)" style="max-width: 80%;margin-right:15px;"><label>km</label>
                                                 </div>
-                                                <div class="cell small-2 cell-question">
+                                                <div class="cell small-1 cell-question">
                                                     <div class="cell-question-p">
                                                         <div class="cell-question-p cell-question-p-2">
                                                             <p><i class="fa fa-question-circle"></i></p>
-                                                            <p class="question-box question-2">En almindelig familie kører som regel mellem 15-20.000 km om året. Vi hjælper dig gerne med at finde det rigtige antal kilometer til dit forbrug - <a href="https://www.charge.dk/contact-us">Tryk her for at skrive til os.</a></p>
+                                                            <p class="question-box question-2">En almindelig familie kører som regel mellem 15-20.000 km om året.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -763,12 +202,18 @@
             </div>
         </div>
     </div>
+
     <!-- HTML END -->
 
     <!-- JS START -->
     <script defer type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script defer type="text/javascript">
         // --- Validate Form (Numeric only)
+$("input").each(function() {
+            $(this).keypress(function() {
+                validateNumber();
+            })
+        })
         function validateNumber(evt) {
             var theEvent = evt || window.event;
             if (theEvent.type === 'paste') {
@@ -816,6 +261,9 @@
                 var bilBatteri = $("input[name='batteri-storrelse']", this).val();
                 var raekkevide = $("input[name='raekkevide']", this).val();
                 var formID = $("input[name='form_hidden_val']", this).val();
+                antalKM = antalKM.replace(",", ".");;
+                bilBatteri = bilBatteri.replace(",", ".");;
+                raekkevide = raekkevide.replace(",", ".");;
                 console.log(formID);
 
                 if (formID == "form_one") {
@@ -1002,7 +450,7 @@
                         arrayElbilPrices.push({
                             "charge_version": charge5_version,
                             "price": charge5_totalPris,
-                            "url": "#",
+                            "url": "https://i.imgur.com/7zypE9f.png",
                             "linkUrl": "https://www.charge.dk/abonnementer/charge-5-1000388"
                         }, {
                             "charge_version": charge10_version,
@@ -1259,7 +707,7 @@
                         arrayElbilPrices.push({
                             "charge_version": charge5_version,
                             "price": charge5_totalPris,
-                            "url": "#",
+                            "url": "https://i.imgur.com/7zypE9f.png",
                             "linkUrl": "https://www.charge.dk/abonnementer/charge-5-1000388"
                         }, {
                             "charge_version": charge10_version,
@@ -1334,11 +782,8 @@
                 }
 
                 evt.preventDefault();
-                // window.history.back();
+
             });
         });
     </script>
     <!-- JS END -->
-</body>
-
-</html>
